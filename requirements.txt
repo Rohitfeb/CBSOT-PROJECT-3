@@ -15,3 +15,7 @@ ipywidgets
 jupyter
 notebook
 tqdm
+datasets
+keybert
+langchain-groq
+langchain-huggingface
