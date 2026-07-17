@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+sentence-transformers
+transformers
+torch
+faiss-cpu
+langchain
+langchain-community
+langchain-google-genai
+google-generativeai
+python-dotenv
+ipywidgets
+jupyter
+notebook
+tqdm
