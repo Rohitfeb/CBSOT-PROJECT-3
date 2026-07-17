@@ -272,3 +272,4 @@ Uses Google Gemini through LangChain to answer research-related questions using 
 
 ## 👨‍💻 Author
 Rohit Kumar Thakur
+Machine Learning & Data Science Enthusiast
