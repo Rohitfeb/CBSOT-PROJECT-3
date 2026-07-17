@@ -3,28 +3,13 @@
 An AI-powered Research Paper Intelligence System that enables semantic search, paper comparison, keyword extraction, and intelligent question answering using Large Language Models (LLMs), Sentence Transformers, FAISS, and LangChain.
 
 
+
 ## 📌 Project Overview
 
 Researchers often spend significant time searching for relevant literature and comparing research papers manually. This project automates these tasks by combining semantic embeddings, vector search, and generative AI.
 
 The system converts research papers into vector embeddings, stores them in a FAISS vector database, and retrieves the most relevant papers based on user queries. It also compares research papers, extracts keywords, and generates AI-powered responses.
 
-## 📂 Dataset
-
-This project uses the publicly available **ML-ArXiv-Papers** dataset from Hugging Face.
-
-The dataset is downloaded automatically when the notebook is executed.
-
-```python
-from datasets import load_dataset
-
-dataset = load_dataset(
-    "CShorten/ML-ArXiv-Papers",
-    split="train"
-)
-```
-
-No manual dataset download is required.
 
 
 ## 🚀 Features
@@ -40,6 +25,7 @@ No manual dataset download is required.
 - 💬 Prompt Engineering Examples
 
 
+
 ## 🛠️ Technologies Used
 
 - Python
@@ -52,6 +38,8 @@ No manual dataset download is required.
 - Scikit-learn
 - Hugging Face Transformers
 - Jupyter Notebook
+
+
 
 ## 📂 Project Structure
 
@@ -82,7 +70,74 @@ Research-Paper-Intelligence-System/
         for using and distributing this project.
 ```
 
----
+## 📂 Dataset
+
+This project uses the **ML-ArXiv-Papers** dataset available on Hugging Face. The dataset contains machine learning research papers with titles, abstracts, and related metadata, making it suitable for semantic search, document comparison, keyword extraction, and question answering tasks.
+
+**Dataset Source:**  
+https://huggingface.co/datasets/CShorten/ML-ArXiv-Papers
+
+### Dataset Loading
+
+The dataset is downloaded automatically when the notebook is executed using the Hugging Face `datasets` library.
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset(
+    "CShorten/ML-ArXiv-Papers",
+    split="train"
+)
+```
+
+### Dataset Features
+
+- 📄 Research paper titles
+- 📝 Abstracts
+- 🏷 Metadata and paper information
+- 🤖 Ready for semantic search and NLP applications
+
+> **Note:** The dataset is **not included** in this repository because it is automatically downloaded from Hugging Face during execution.
+
+
+## 🔑 API Key Setup
+
+This project uses the **Groq API** to power the Large Language Model (LLM).
+
+### Get a Groq API Key
+
+1. Visit https://console.groq.com/
+2. Sign in or create an account.
+3. Generate a new API key.
+
+### Configure in Google Colab
+
+1. Open the **Secrets** panel (🔑 icon).
+2. Create a new secret.
+
+Name:
+
+```
+GROQ_API_KEY
+```
+
+Value:
+
+```
+Paste your Groq API key here
+```
+
+3. Enable **Notebook access**.
+
+The notebook automatically loads the API key using:
+
+```python
+from google.colab import userdata
+
+api_key = userdata.get("GROQ_API_KEY")
+```
+
+
 
 ## ⚙️ Installation
 
