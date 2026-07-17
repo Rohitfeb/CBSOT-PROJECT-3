@@ -9,6 +9,23 @@ Researchers often spend significant time searching for relevant literature and c
 
 The system converts research papers into vector embeddings, stores them in a FAISS vector database, and retrieves the most relevant papers based on user queries. It also compares research papers, extracts keywords, and generates AI-powered responses.
 
+## 📂 Dataset
+
+This project uses the publicly available **ML-ArXiv-Papers** dataset from Hugging Face.
+
+The dataset is downloaded automatically when the notebook is executed.
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset(
+    "CShorten/ML-ArXiv-Papers",
+    split="train"
+)
+```
+
+No manual dataset download is required.
+
 
 ## 🚀 Features
 
